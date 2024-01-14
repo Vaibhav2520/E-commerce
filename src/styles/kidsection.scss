@@ -1,0 +1,61 @@
+.MuiPaper-root {
+    margin-top: 15px;
+  }
+  .line-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .button-container {
+      color: white !important;
+    }
+  
+    .kids-line {
+      width: 40px;
+      height: 2px;
+      background-color: whitesmoke;
+    }
+  }
+
+
+  .menu-container{
+    
+    .kidsection-container{
+      display: flex;
+      flex-direction: row;
+      width: 400px;
+      justify-content: space-evenly;
+      height: 300px;
+      
+      a{
+        text-decoration: none;
+        color: grey;
+        font-weight: 300;
+        font-size: small;
+        &:hover{
+          color: black;
+        }
+      }
+      .featured-kidsection{
+  
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      justify-content: space-evenly;
+        
+      }
+  
+      .boys-kidsection{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      justify-content: space-evenly;
+      }
+  
+      .girls-kidsection{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      justify-content: space-evenly;
+      }
+    }
+  }

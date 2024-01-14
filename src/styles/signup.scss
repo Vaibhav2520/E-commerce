@@ -1,0 +1,60 @@
+.signup-section {
+  height: 100vh;
+  .signup-page {
+    width: 100%;
+    height: 100%;
+  }
+  .signup-box {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 10%;
+    display: flex;
+    justify-content: end;
+    left: -5%;
+    .form-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40%;
+      height: 80vh;
+      position: relative;
+      background-color: white;
+      border-radius: 2em;
+      box-shadow: 0px 0px 14px 2px rgba(123, 123, 123, 0.85);
+
+      opacity: 1;
+      .create-account {
+        margin-top: 1.5em;
+        opacity: 1;
+        font-family: "Anton", sans-serif;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2em;
+        width: 100%;
+        .button {
+          border: gray solid 1px;
+          color: black;
+        }
+      }
+      .divider-container {
+        margin: 4em;
+      }
+
+      .signup-textfield {
+        width: 50%;
+        div{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+      }
+      .create-button{
+        border: gray solid 1px;
+          color: black;
+      }
+    }
+  }
+}
