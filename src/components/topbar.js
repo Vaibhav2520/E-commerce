@@ -179,15 +179,15 @@ const Topbar = () => {
             </div>
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                sx={{ mr: 2 }}
-              >
-              <ShoppingCartIcon/> 
-              </IconButton>
+             <div className="login-register">
+              <MenuItem>
+              <Link to="/login" >Login</Link>
+              </MenuItem>
+              <MenuItem>
+              <Link to="/signup" >Register</Link>
+              </MenuItem>
+             </div>
+             
 
               <IconButton
                 size="large"
