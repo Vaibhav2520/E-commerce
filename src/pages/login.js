@@ -10,6 +10,7 @@ import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import {signInWithEmailAndPassword  } from "firebase/auth";
 import { auth } from "../firebase";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -86,9 +87,11 @@ const Login = () => {
             <Typography variant="caption" color="gray">
               Forgot Password?
             </Typography>
+            <Link to="/">
             <Button variant="contained" className="signup-button" onClick={login}>
               Login
             </Button>
+            </Link>
           </div>
           <div className="image-container">
             <img src={Swooshlogo} alt="Swooshlogo" className="swooshlogo" />

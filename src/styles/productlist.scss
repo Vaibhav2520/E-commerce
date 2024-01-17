@@ -1,11 +1,11 @@
-.image-container{
+.image-container {
   width: 100%;
   height: 200px;
 }
-.add-cart{
+.add-cart {
   white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: ellipsis;
   background-color: black !important;
   border: black solid 1px !important;
   color: white !important;
@@ -19,46 +19,49 @@
   height: 100vh;
   justify-content: space-between;
   .filter-section {
-    margin-top: 89px;
-    border-right:gray solid 1px;
-   
+    margin-top: 90px;
+    border-right: gray solid 1px;
+    position: fixed;
+    float: left;
+    width: 30%;
+    height: 100vh;
 
     .divider-container {
       margin-top: 10px;
       margin-bottom: 10px;
     }
-    .Gender-heading{
-        font-weight: 600;
-        font-size: large;
+    .Gender-heading {
+      font-weight: 600;
+      font-size: large;
     }
     .gender-section {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    .price-heading{
-      font-weight: 600;
-        font-size: large;
-    }
-    .price-section{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .sale-heading{
-      font-weight: 600;
-        font-size: large;
-    }
-    .sale-section{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .category-heading{
+    .price-heading {
       font-weight: 600;
       font-size: large;
     }
-    .category-section{
+    .price-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sale-heading {
+      font-weight: 600;
+      font-size: large;
+    }
+    .sale-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .category-heading {
+      font-weight: 600;
+      font-size: large;
+    }
+    .category-section {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -66,19 +69,21 @@
   }
   .product-list {
     margin-top: 89px;
-    padding: 10px;
     height: 100vh;
-    .item-container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    float: right !important;
+    width: 70%;
+    margin-right: 30px;
+    .item-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+     
     }
 
     .item-details {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      
     }
   }
 }

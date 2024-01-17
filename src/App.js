@@ -15,6 +15,7 @@ function App() {
         {/* <Topbar/> */}
           <Routes>
               <Route path='/cart' element={<Cartpage/>}/>
+
               <Route path="/" element={<Landing/>}/>
               <Route path='/shoes' element={<Shoes/>}/>
               <Route path="/login" element={<Login/>}/>

@@ -8,16 +8,15 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MoreIcon from "@mui/icons-material/MoreVert";
+import {signOut} from "firebase/auth"
 import "../styles/topbar.scss";
 import Swooshlogo from "../images/swooshlogo.png";
-import  Mensection from '../components/mensection'
-import Womensection from '../components/womensection'
-import Kidsection from "../components/kidsection";
-import Collectionsection from "../components/collectionsection";
+import { Link } from "react-router-dom";
+import { auth } from "../firebase";
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -60,6 +59,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Topbar = () => {
+
+  const logout = async () =>{
+    await signOut(auth);
+  }
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -102,6 +105,7 @@ const Topbar = () => {
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={logout}>Log Out</MenuItem>
     </Menu>
   );
 
@@ -137,6 +141,9 @@ const Topbar = () => {
       </MenuItem>
     </Menu>
   );
+
+
+
   return (
     <div >
       <Box sx={{ flexGrow: 1 }} className="nav-conttainer">
@@ -148,11 +155,13 @@ const Topbar = () => {
               component="div"
               sx={{ display: { xs: "none", sm: "block" } }}
             >
+             <Link to="/">
               <img src={Swooshlogo} alt="Swooshlogo" className="swooshlogo" />
+             </Link>
             </Typography>
             <Search className="search-bar">
               <SearchIconWrapper>
-                <SearchIcon />
+                <SearchIcon/>
               </SearchIconWrapper>
               <StyledInputBase
                 placeholder="Search…"
@@ -162,16 +171,10 @@ const Topbar = () => {
             </Search>
             <div className="category-container">
               <MenuItem>
-               <Mensection/>
+              <Link to="/shoes?gender=MEN" >MEN</Link>
               </MenuItem>
               <MenuItem>
-                <Womensection/>
-              </MenuItem>
-              <MenuItem>
-                <Kidsection/>
-              </MenuItem>
-              <MenuItem>
-                <Collectionsection/>
+              <Link to="/shoes?gender=WOMEN">WOMEN</Link>
               </MenuItem>
             </div>
             <Box sx={{ flexGrow: 1 }} />
@@ -183,7 +186,7 @@ const Topbar = () => {
                 aria-label="open drawer"
                 sx={{ mr: 2 }}
               >
-                <MenuIcon />
+              <ShoppingCartIcon/> 
               </IconButton>
 
               <IconButton
@@ -196,18 +199,6 @@ const Topbar = () => {
                 color="inherit"
               >
                 <AccountCircle />
-              </IconButton>
-            </Box>
-            <Box sx={{ display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="show more"
-                aria-controls={mobileMenuId}
-                aria-haspopup="true"
-                onClick={handleMobileMenuOpen} 
-                color="inherit"
-              >
-                <MoreIcon />
               </IconButton>
             </Box>
           </Toolbar>

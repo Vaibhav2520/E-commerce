@@ -14,7 +14,12 @@
       }
       .category-container{
          display: flex;
-         
+         li{
+            a{
+               color: white;
+               text-decoration: none;
+            }
+         }
       }
       .search-bar{
          border-radius:5em
