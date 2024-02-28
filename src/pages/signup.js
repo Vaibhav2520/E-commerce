@@ -60,7 +60,7 @@ const Signup = () => {
                 height="15"
                 style={{ marginRight: "6px" }}
               />
-              Signup with facebook
+              Signup with Twitter
             </Button>
           </div>
           <Root>
@@ -70,23 +70,26 @@ const Signup = () => {
             <TextField
               id="standard-basic"
               label="Full Name"
-              variant="standard"
+              variant="outlined"
+              focused
             />
             <TextField
               id="standard-basic"
               label="Email"
-              variant="standard"
+              variant="outlined"
               onChange={(event) => {
                 setRegisterEmail(event.target.value);
               }}
+              focused
             />
             <TextField
               id="standard-basic"
               label="Password"
-              variant="standard"
+              variant="outlined"
               onChange={(event) => {
                 setRegisterPassword(event.target.value);
               }}
+              focused
             />
           </div>
           <Button
