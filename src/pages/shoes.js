@@ -5,15 +5,13 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import "../styles/productlist.scss";
 import { Button, Typography } from "@mui/material";
-import Nikeairjordanmid from "../images/Nike Air Jordan Mid .png";
 import Divider from "@mui/material/Divider";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import { Flag } from "@mui/icons-material";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Topbar from "../components/topbar";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, getDocs} from "firebase/firestore";
 import { db } from "../firebase";
 
 const Item = styled(Paper)(({ theme }) => ({

@@ -1,0 +1,50 @@
+.shopping-cart {
+    margin-top: 7rem;
+    width: 50%;
+    .divider{
+        width: 100%;
+        margin:2rem;
+    }
+  .table-list {
+    width: 100%;
+    border: 1px solid white;
+    margin-left: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1rem;
+    border-radius: 1rem;
+    .counter {
+      width: 150px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h6 {
+        width: 50px;
+        border: 0;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        background: #000000;
+        color: #fff;
+        appearance: none;
+        outline: 0;
+      }
+      .down {
+        display: block;
+        font-size: 25px;
+        padding: 0 10px;
+        cursor: pointer;
+        color: #000000;
+        user-select: none;
+      }
+      .up{
+        display: block;
+        font-size: 25px;
+        padding: 0 10px;
+        cursor: pointer;
+        color: #000000;
+        user-select: none;
+      }
+    }
+  }
+}
